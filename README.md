@@ -22,7 +22,7 @@
 
 ### Setup
 - Open Terminal
-- Run git clone git@github.com:abouhid/Enumerable-methods-Project.git
+- Run git clone https://github.com/abouhid/Tic-Tac-Toe.git
 - Run ruby enumerable_methods.rb
 
 ## Author
@@ -33,10 +33,11 @@
 - LinkedIn: [Alexandre Bouhid](https://www.linkedin.com/in/alexandrebouhid/)
 
 
-👤 **Alexandre Bouhid**
+👤 **Bereket Beshane**
 
-- Github: [@abouhid](https://github.com/abouhid)
-- LinkedIn: [Alexandre Bouhid](https://www.linkedin.com/in/alexandrebouhid/)
+- Github: [@berabjesus](https://github.com/Berabjesus)
+- Twitter: [@bereket_ababu_b](https://twitter.com/bereket_ababu_b)
+- Linkedin: [linkedin](https://www.linkedin.com/in/bereket-beshane-a1b75a1a9/)
 
 ## 🤝 Contributing
 
