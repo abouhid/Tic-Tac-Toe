@@ -11,9 +11,9 @@ puts 'Player two please enter your name!'.green
 
 player2 = gets.chomp.green
 
-puts "==========================".blue
+puts '=========================='.blue
 puts "#{player1} VS #{player2}"
-puts "==========================".blue
+puts '=========================='.blue
 
 puts "Hi #{player1} Please choose your weapon.\nX or O ?"
 
@@ -31,22 +31,21 @@ puts
 move = gets.chomp
 
 # Checks if it is a valid move
-puts (1..9).any?(move.to_i) ? "#{player2} its your turn" : "Invalid move, try again!"
+puts (1..9).any?(move.to_i) ? "#{player2} its your turn" : 'Invalid move, try again!'
 
-# Board will be displayed again with game logic 
+# Board will be displayed again with game logic
 
 # Repeat previous options for next player with updated grid
 
 # If it is a winning move
 winner = player1.yellow
-puts "==========================".blue
+puts '=========================='.blue
 puts "Congratulation #{winner}! You Won!"
-puts "==========================".blue
+puts '=========================='.blue
 # If it is a Draw
 puts 'We got a draw!'
 
 # Ask if players want to play once more
-puts "Would you like to play again?"
+puts 'Would you like to play again?'
 
 # A question is asked with Yes/No and the code is looped or it closes
-
