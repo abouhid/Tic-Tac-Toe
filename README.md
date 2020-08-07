@@ -1,18 +1,8 @@
-# Enumerable methods
+# Tic Tac Toe Project
 
-> In this project, I was assigned to recreate enumerable methods of Ruby such as:
+> In this project, it is assigned for us to create a Tic Tac Toe game using only Ruby to increase our knowledge on the OOP concepts. This project was split in 4 milestones.
 
-- my_each
-- my_each_with_index 
-- my_select
-- my_all? 
-- my_any?
-- my_none?
-- my_count
-- my_map
-- my_inject
-
-> The main goal of this project is to asure I master the methods ruby provides and to learn how to replicate them using basic coding knowledge.
+> The main goal of this project is to asure we master classes,objects and methods, and to learn how to work better with Ruby and GitFlow.
 
 ## Built With
 
@@ -22,7 +12,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://repl.it/@abouhid/Enumerable-methods#main.rb)
+[Live Demo Link]()
 
 
 
@@ -32,7 +22,7 @@
 
 ### Setup
 - Open Terminal
-- Run git clone git@github.com:abouhid/Enumerable-methods-Project.git
+- Run git clone https://github.com/abouhid/Tic-Tac-Toe.git
 - Run ruby enumerable_methods.rb
 
 ## Author
@@ -41,6 +31,13 @@
 
 - Github: [@abouhid](https://github.com/abouhid)
 - LinkedIn: [Alexandre Bouhid](https://www.linkedin.com/in/alexandrebouhid/)
+
+
+👤 **Bereket Beshane**
+
+- Github: [@berabjesus](https://github.com/Berabjesus)
+- Twitter: [@bereket_ababu_b](https://twitter.com/bereket_ababu_b)
+- Linkedin: [linkedin](https://www.linkedin.com/in/bereket-beshane-a1b75a1a9/)
 
 ## 🤝 Contributing
 

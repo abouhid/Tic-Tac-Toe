@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 require 'colorize'
 
 puts 'Welcome to the Tic-Tac-Toe Experience \n'.blue
@@ -44,9 +43,10 @@ puts "==========================".blue
 puts "Congratulation #{winner}! You Won!"
 puts "==========================".blue
 # If it is a Draw
-puts 'We got a draw!'.gray
+puts 'We got a draw!'
 
 # Ask if players want to play once more
 puts "Would you like to play again?"
 
 # A question is asked with Yes/No and the code is looped or it closes
+
