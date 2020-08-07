@@ -3,6 +3,9 @@ require 'colorize'
 
 puts 'Welcome to the Tic-Tac-Toe Experience \n'.blue
 
+playing_game = true
+while playing_game
+
 puts 'Player one please enter your name!'.red
 
 player1 = gets.chomp.red
@@ -17,35 +20,71 @@ puts '=========================='.blue
 
 puts "Hi #{player1} Please choose your weapon.\nX or O ?"
 
-# Player1 chooses if he wants to be X or O
+player1_symbol = gets.chomp.upcase
+while player1_symbol != 'X' && player1_symbol != 'O'
+  puts 'Please type a valid symbol'
+  player1_symbol = gets.chomp.upcase
+end
 
-grid = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-puts "Hi #{player1} it is your turn! Please choose your move"
-print grid[0].join(' | ')
-puts
-print grid[1].join(' | ')
-puts
-print grid[2].join(' | ')
-puts
+symbols = {}
+if player1_symbol == 'X'
+  current_player = player1
+  symbols[:player1] = 'X'
+  symbols[:player2] = 'O'
+else
+  current_player = player2
+  symbols[:player2] = 'O'
+  symbols[:player1] = 'X'
+end
 
-move = gets.chomp
+puts "#{player1} your symbol is #{symbols[:player1]}"
+puts "#{player2} your symbol is #{symbols[:player2]}"
 
-# Checks if it is a valid move
-check = (1..9).any?(move.to_i) ? "#{player2} its your turn" : 'Invalid move, try again!'
-puts check
-# Board will be displayed again with game logic
+changing_turns = true
+while changing_turns
+  grid = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+  puts "Hi #{current_player} it is your turn!"
+  puts
+  print grid[0].join(' | ')
+  puts
+  print grid[1].join(' | ')
+  puts
+  print grid[2].join(' | ')
+  puts
 
-# Repeat previous options for next player with updated grid
+  puts "Choose your desired number"
+  move = gets.chomp.to_i
 
-# If it is a winning move
-winner = player1.yellow
-puts '=========================='.blue
-puts "Congratulation #{winner}! You Won!"
-puts '=========================='.blue
-# If it is a Draw
-puts 'We got a draw!'
+  while (1..9).none?(move)
+    puts 'Please type a valid number between 1 and 9'
+    move = gets.chomp.to_i
+  end
 
-# Ask if players want to play once more
-puts 'Would you like to play again?'
-
-# A question is asked with Yes/No and the code is looped or it closes
+  winning_move = 7
+  draw_move = 8
+  if move == winning_move
+    puts '=========================='.blue
+    puts "Congratulation #{current_player}! You Won!"
+    puts '=========================='.blue
+    puts "Do you want to replay? Y/N"
+    status = gets.chomp.upcase
+    while status != 'Y' && status != 'N'
+      puts 'Please type Y or N'
+      status = gets.chomp.upcase
+    end
+    playing_game = false if status == 'N'
+    changing_turns = false if status == 'N'
+  elsif move == draw_move
+    puts "You have a Draw. Do you want to replay? Y/N"
+    status = gets.chomp.upcase
+    while status != 'Y' && status != 'N'
+      puts 'Please type Y or N'
+      status = gets.chomp.upcase
+    end
+    playing_game = false if status == 'N'
+    changing_turns = false if status == 'N'
+  elsif current_player == player1
+    current_player = current_player == player1 ? player2 : player1
+  end
+end
+end
