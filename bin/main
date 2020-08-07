@@ -6,85 +6,85 @@ puts 'Welcome to the Tic-Tac-Toe Experience \n'.blue
 playing_game = true
 while playing_game
 
-puts 'Player one please enter your name!'.red
+  puts 'Player one please enter your name!'.red
 
-player1 = gets.chomp.red
+  player1 = gets.chomp.red
 
-puts 'Player two please enter your name!'.green
+  puts 'Player two please enter your name!'.green
 
-player2 = gets.chomp.green
+  player2 = gets.chomp.green
 
-puts '=========================='.blue
-puts "#{player1} VS #{player2}"
-puts '=========================='.blue
+  puts '=========================='.blue
+  puts "#{player1} VS #{player2}"
+  puts '=========================='.blue
 
-puts "Hi #{player1} Please choose your weapon.\nX or O ?"
+  puts "Hi #{player1} Please choose your weapon.\nX or O ?"
 
-player1_symbol = gets.chomp.upcase
-while player1_symbol != 'X' && player1_symbol != 'O'
-  puts 'Please type a valid symbol'
   player1_symbol = gets.chomp.upcase
-end
+  while player1_symbol != 'X' && player1_symbol != 'O'
+    puts 'Please type a valid symbol'
+    player1_symbol = gets.chomp.upcase
+  end
 
-symbols = {}
-if player1_symbol == 'X'
-  current_player = player1
-  symbols[:player1] = 'X'
-  symbols[:player2] = 'O'
-else
-  current_player = player2
-  symbols[:player2] = 'O'
-  symbols[:player1] = 'X'
-end
+  symbols = {}
+  if player1_symbol == 'X'
+    current_player = player1
+    symbols[:player1] = 'X'
+    symbols[:player2] = 'O'
+  else
+    current_player = player2
+    symbols[:player2] = 'O'
+    symbols[:player1] = 'X'
+  end
 
-puts "#{player1} your symbol is #{symbols[:player1]}"
-puts "#{player2} your symbol is #{symbols[:player2]}"
+  puts "#{player1} your symbol is #{symbols[:player1]}"
+  puts "#{player2} your symbol is #{symbols[:player2]}"
 
-changing_turns = true
-while changing_turns
-  grid = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-  puts "Hi #{current_player} it is your turn!"
-  puts
-  print grid[0].join(' | ')
-  puts
-  print grid[1].join(' | ')
-  puts
-  print grid[2].join(' | ')
-  puts
+  changing_turns = true
+  while changing_turns
+    grid = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    puts "Hi #{current_player} it is your turn!"
+    puts
+    print grid[0].join(' | ')
+    puts
+    print grid[1].join(' | ')
+    puts
+    print grid[2].join(' | ')
+    puts
 
-  puts "Choose your desired number"
-  move = gets.chomp.to_i
-
-  while (1..9).none?(move)
-    puts 'Please type a valid number between 1 and 9'
+    puts 'Choose your desired number'
     move = gets.chomp.to_i
-  end
 
-  winning_move = 7
-  draw_move = 8
-  if move == winning_move
-    puts '=========================='.blue
-    puts "Congratulation #{current_player}! You Won!"
-    puts '=========================='.blue
-    puts "Do you want to replay? Y/N"
-    status = gets.chomp.upcase
-    while status != 'Y' && status != 'N'
-      puts 'Please type Y or N'
-      status = gets.chomp.upcase
+    while (1..9).none?(move)
+      puts 'Please type a valid number between 1 and 9'
+      move = gets.chomp.to_i
     end
-    playing_game = false if status == 'N'
-    changing_turns = false if status == 'N'
-  elsif move == draw_move
-    puts "You have a Draw. Do you want to replay? Y/N"
-    status = gets.chomp.upcase
-    while status != 'Y' && status != 'N'
-      puts 'Please type Y or N'
+
+    winning_move = 7
+    draw_move = 8
+    if move == winning_move
+      puts '=========================='.blue
+      puts "Congratulation #{current_player}! You Won!"
+      puts '=========================='.blue
+      puts 'Do you want to replay? Y/N'
       status = gets.chomp.upcase
+      while status != 'Y' && status != 'N'
+        puts 'Please type Y or N'
+        status = gets.chomp.upcase
+      end
+      playing_game = false if status == 'N'
+      changing_turns = false if status == 'N'
+    elsif move == draw_move
+      puts 'You have a Draw. Do you want to replay? Y/N'
+      status = gets.chomp.upcase
+      while status != 'Y' && status != 'N'
+        puts 'Please type Y or N'
+        status = gets.chomp.upcase
+      end
+      playing_game = false if status == 'N'
+      changing_turns = false if status == 'N'
+    elsif current_player == player1
+      current_player = current_player == player1 ? player2 : player1
     end
-    playing_game = false if status == 'N'
-    changing_turns = false if status == 'N'
-  elsif current_player == player1
-    current_player = current_player == player1 ? player2 : player1
   end
-end
 end
