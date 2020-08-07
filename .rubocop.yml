@@ -22,6 +22,8 @@ Metrics/PerceivedComplexity:
   Enabled: false
 Metrics/ModuleLength:
   Enabled: false
+Metrics/BlockNesting:
+  Enabled: false
 Style/For:
   Enabled: false
 

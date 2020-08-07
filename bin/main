@@ -60,8 +60,12 @@ while playing_game
       move = gets.chomp.to_i
     end
 
+    # Board will be changed with the respective symbol
+
+    # Numbers chosen to simulate wins and draws
     winning_move = 7
     draw_move = 8
+
     if move == winning_move
       puts '=========================='.blue
       puts "Congratulation #{current_player}! You Won!"
@@ -73,7 +77,8 @@ while playing_game
         status = gets.chomp.upcase
       end
       playing_game = false if status == 'N'
-      changing_turns = false if status == 'N'
+      changing_turns = false if status == 'Y'
+
     elsif move == draw_move
       puts 'You have a Draw. Do you want to replay? Y/N'
       status = gets.chomp.upcase
@@ -82,8 +87,8 @@ while playing_game
         status = gets.chomp.upcase
       end
       playing_game = false if status == 'N'
-      changing_turns = false if status == 'N'
-    elsif current_player == player1
+      changing_turns = false if status == 'Y'
+    else
       current_player = current_player == player1 ? player2 : player1
     end
   end
