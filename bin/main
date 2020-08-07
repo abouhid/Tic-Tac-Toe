@@ -31,8 +31,8 @@ puts
 move = gets.chomp
 
 # Checks if it is a valid move
-puts (1..9).any?(move.to_i) ? "#{player2} its your turn" : 'Invalid move, try again!'
-
+check = (1..9).any?(move.to_i) ? "#{player2} its your turn" : 'Invalid move, try again!'
+puts check
 # Board will be displayed again with game logic
 
 # Repeat previous options for next player with updated grid
