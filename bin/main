@@ -49,4 +49,26 @@ class Main
     show_players
   end
 
+  def show_players
+    clear_screen
+    divide(1)
+    puts "\n\t\t\t\t #{@player1[1]} vs #{@player2[1]} \n\n"
+    divide(1)
+    display_board
+  end
+
+  def display_board(game_over = false)
+    print "\n\n"
+    print top = "       |       |       \n"
+    puts "   #{@board[0]}   |   #{@board[1]}   |   #{@board[2]}   "
+    print bottom = "_______|_______|________\n"
+    print top
+    print "   #{@board[3]}   |   #{@board[4]}   |   #{@board[5]}   \n"
+    print bottom
+    print top
+    print "   #{@board[6]}   |   #{@board[7]}   |   #{@board[8]}   \n"
+    print top
+    update_board if game_over == false
+  end
+
 end
