@@ -93,6 +93,15 @@ class Main
     option
   end
 
-  
+    def validate(range, input)
+    try = 4
+    while  range.none?(input) && try.positive?
+      puts " Please choose a Number Between #{range} you have #{try} trials left".yellow
+      break if range.any?(input = gets.chomp.to_i)
+
+      try -= 1
+    end
+    try.zero? ? false : input
+  end
 
 end
