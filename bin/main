@@ -104,4 +104,20 @@ class Main
     try.zero? ? false : input
   end
 
+  def show_wrong_input
+    divide(0)
+    puts "\n**** That number is already choosen! please provide a different input. ****\n"
+    divide(0)
+    update_board
+  end
+
+  def show_winner
+    clear_screen
+    divide(1)
+    display_board(true)
+    puts "\n\t\t**** Congratualtions #{@current_player[1]} You have won the game ****\n\n\n".on_green
+    divide(1)
+    restart(1)
+  end
+
 end
