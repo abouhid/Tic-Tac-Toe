@@ -36,8 +36,8 @@ This project was split in 4 milestones, which were:
 
 ### Demonstration
 
-![Example](Example.gif)
-
+<!-- ![Example](Example.gif) -->
+<img src="./Example.gif" width="500" height="500" />
 ## Author
 
 👤 **Alexandre Bouhid**
