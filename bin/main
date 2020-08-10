@@ -30,7 +30,7 @@ class Main
     abort_game(2) if choice == 2
     clear_screen
     show_instructions
-    get_players(choice)
+    get_players
   end
 
   def show_instructions
@@ -175,5 +175,6 @@ class Main
       abort 'Thank you for playing, Exiting . . .'.on_red
     end
   end
-
 end
+
+Main.new
