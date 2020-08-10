@@ -25,12 +25,17 @@ class Main
   def show_start_options
     puts 'Select an option'
     puts '1. Player vs Player'
-    puts '2. Player vs CPU'
-    puts '3. Exit'.red
-    choice = check_input((1..3))
-    abort_game(2) if choice == 3
+    puts '2. Exit'.red
+    choice = check_input((1..2))
+    abort_game(2) if choice == 2
     clear_screen
     show_instructions
     get_players(choice)
+  end
+
+  def show_instructions
+    divide(1)
+    puts "\n---------------GAME INSTRUCTIONS---------------\n".on_green
+    puts " ** Player one will take #{@player1[0]} and Player two will take  #{@player2[0]} \n"
   end
 end
