@@ -1,2 +1,178 @@
 #!/usr/bin/env ruby
-puts 'Hello World'
+require 'colorize'
+require_relative '../lib/Logic.rb'
+
+class Main
+  def initialize
+    @game_logic = Logic.new
+    @board = @game_logic.board
+    @player1 = ['X']
+    @player2 = ['O']
+    @current_player = @player1
+    show_welcome_interface
+  end
+
+  private
+
+  def show_welcome_interface
+    divide(1)
+    puts "\n\t\t\t\t Welcome to TIC-TAC-TOE \n\n"
+    divide(1)
+    puts "\n\n"
+    show_start_options
+  end
+
+  def show_start_options
+    puts 'Select an option'
+    puts '1. Player vs Player'
+    puts '2. Exit'.red
+    choice = check_input((1..2))
+    abort_game(2) if choice == 2
+    clear_screen
+    show_instructions
+    name_players
+  end
+
+  def show_instructions
+    divide(1)
+    puts "\n---------------GAME INSTRUCTIONS---------------\n".on_green
+    puts " ** Player one will take #{@player1[0]} and Player two will take  #{@player2[0]} \n"
+  end
+
+  def name_players
+    divide(1)
+    puts "\n Player 1 please Enter your name "
+    print ' :-  '
+    @player1.push(gets.chomp)
+    puts "\nPlayer 2 please Enter your name"
+    print ' :-  '
+    @player2.push(gets.chomp)
+    show_players
+  end
+
+  def show_players
+    clear_screen
+    divide(1)
+    puts "\n\t\t\t\t #{@player1[1]} vs #{@player2[1]} \n\n"
+    divide(1)
+    display_board
+  end
+
+  def display_board(game_over = false)
+    print "\n\n"
+    print top = "       |       |       \n"
+    puts "   #{@board[0]}   |   #{@board[1]}   |   #{@board[2]}   "
+    print bottom = "_______|_______|________\n"
+    print top
+    print "   #{@board[3]}   |   #{@board[4]}   |   #{@board[5]}   \n"
+    print bottom
+    print top
+    print "   #{@board[6]}   |   #{@board[7]}   |   #{@board[8]}   \n"
+    print top
+    update_board if game_over == false
+  end
+
+  def update_board
+    puts "\n\n #{@current_player[1]} choose your move From the available numbers"
+    print ' :-'
+    get_move = check_input((1..9))
+    update_game = @game_logic.update(get_move, @current_player)
+    update_game = show_wrong_input while update_game == false
+    show_winner if update_game == 'WIN'
+    show_draw if update_game == 'DRAW'
+    @current_player = @current_player == @player1 ? @player2 : @player1
+    clear_screen
+    display_board
+  end
+
+  def check_input(range)
+    option = validate(range, gets.chomp.to_i)
+    abort_game(1) unless option
+    option
+  end
+
+  def validate(range, input)
+    try = 4
+    while range.none?(input) && try.positive?
+      puts " Please choose a Number Between #{range} you have #{try} trials left".yellow
+      break if range.any?(input = gets.chomp.to_i)
+
+      try -= 1
+    end
+    try.zero? ? false : input
+  end
+
+  def show_wrong_input
+    divide(0)
+    puts "\n**** That number is already choosen! please provide a different input. ****\n"
+    divide(0)
+    update_board
+  end
+
+  def show_winner
+    clear_screen
+    divide(1)
+    display_board(true)
+    puts "\n\t\t**** Congratualtions #{@current_player[1]} You have won the game ****\n\n\n".on_green
+    divide(1)
+    restart(1)
+  end
+
+  def show_draw
+    clear_screen
+    divide(1)
+    display_board(true)
+    puts "\n\t\t**** Its a draw between #{@player1[1]} and #{@player2[1]} ****\n\n\n".on_yellow
+    divide(1)
+    restart
+  end
+
+  def restart(game_status = 0)
+    if game_status == 1
+      puts "\nDo you want to restart the game? Press Y to play again, hit any other key to finish the game"
+      abort_game(2) unless gets.chomp.upcase == 'Y'
+      reinitiate(game_status)
+    else
+      puts "\nDo you want to replay? Press Y to play again, hit any other key to finish the game"
+      abort_game(2) unless gets.chomp.upcase == 'Y'
+      reinitiate
+    end
+  end
+
+  def reinitiate(type = 0)
+    @board = @game_logic.board
+    clear_screen
+    if type == 1
+      @player1 = ['X']
+      @player2 = ['O']
+      @current_player = @player1
+      show_welcome_interface
+    else
+      display_board
+    end
+  end
+
+  def divide(num)
+    if num == 1
+      100.times { print '#'.black.on_cyan }
+    else
+      100.times { print '!'.black.on_red }
+    end
+    print "\n"
+  end
+
+  def clear_screen
+    system 'cls'
+    system 'clear'
+  end
+
+  def abort_game(status)
+    if status == 1
+      abort 'Too many wrong inputs, Exiting . . .'.on_red
+    elsif status == 2
+      abort 'Thank you for playing, Exiting . . .'.on_red
+    end
+  end
+end
+
+Main.new

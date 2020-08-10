@@ -1,6 +1,11 @@
 # Tic Tac Toe Project
 
-> In this project, it is assigned for us to create a Tic Tac Toe game using only Ruby to increase our knowledge on the OOP concepts. This project was split in 4 milestones.
+> In this project, it is assigned for us to create a Tic Tac Toe game using only Ruby to increase our knowledge on the OOP concepts. 
+This project was split in 4 milestones, which were:
+- Setting up the project
+- Designing the user interface
+- Creating the game logic
+- Writing the game instructions
 
 > The main goal of this project is to asure we master classes,objects and methods, and to learn how to work better with Ruby and GitFlow.
 
@@ -23,7 +28,11 @@
 ### Setup
 - Open Terminal
 - Run git clone https://github.com/abouhid/Tic-Tac-Toe.git
-- Run ruby enumerable_methods.rb
+- Run cd bin
+- Run ruby main
+
+### Game instructions
+
 
 ## Author
 
