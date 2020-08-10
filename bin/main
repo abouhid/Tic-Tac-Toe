@@ -30,7 +30,7 @@ class Main
     abort_game(2) if choice == 2
     clear_screen
     show_instructions
-    get_players
+    name_players
   end
 
   def show_instructions
@@ -39,7 +39,7 @@ class Main
     puts " ** Player one will take #{@player1[0]} and Player two will take  #{@player2[0]} \n"
   end
 
-  def get_players
+  def name_players
     divide(1)
     puts "\n Player 1 please Enter your name "
     print ' :-  '
@@ -100,7 +100,7 @@ class Main
       try -= 1
     end
     try.zero? ? false : input
-end
+  end
 
   def show_wrong_input
     divide(0)
