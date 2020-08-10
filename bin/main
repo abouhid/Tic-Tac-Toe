@@ -38,4 +38,15 @@ class Main
     puts "\n---------------GAME INSTRUCTIONS---------------\n".on_green
     puts " ** Player one will take #{@player1[0]} and Player two will take  #{@player2[0]} \n"
   end
+
+  def get_players
+    divide(1)
+    puts "\n Player 1 please Enter your name "
+    print ' :-  '
+    @player1.push(gets.chomp)
+    puts "\nPlayer 2 please Enter your name"
+    print ' :-  '
+    @player2.push(gets.chomp)
+    show_players
+  end
 end
