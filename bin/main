@@ -1,4 +1,14 @@
 #!/usr/bin/env ruby
 require 'colorize'
 
+class Main
+  def initialize
+    @game_logic = Logic.new
+    @board = @game_logic.board
+    @player1 = ['X']
+    @player2 = ['O']
+    @current_player = @player1
+    show_welcome_interface
+  end
 
+end
