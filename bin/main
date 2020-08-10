@@ -138,4 +138,39 @@ class Main
     end
   end
 
+  def reinitiate(type = 0)
+    @board = @game_logic.board
+    clear_screen
+    if type == 1
+      @player1 = ['X']
+      @player2 = ['O']
+      @current_player = @player1
+      show_welcome_interface
+    else
+      display_board
+    end
+  end
+
+  def divide(num)
+    if num == 1
+      100.times { print '#'.black.on_cyan }
+    else
+      100.times { print '!'.black.on_red }
+    end
+    print "\n"
+  end
+
+  def clear_screen
+    system 'cls'
+    system 'clear'
+  end
+
+  def abort_game(status)
+    if status == 1
+      abort 'Too many wrong inputs, Exiting . . .'.on_red
+    elsif status == 2
+      abort 'Thank you for playing, Exiting . . .'.on_red
+    end
+  end
+
 end
