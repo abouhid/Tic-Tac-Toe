@@ -9,7 +9,7 @@ This project was split in 4 milestones, which were:
 
 > The main goal of this project is to asure we master classes,objects and methods, and to learn how to work better with Ruby and GitFlow.
 
-## Built With
+# Built With
 
 - Ruby
 - Rubocop
@@ -33,6 +33,10 @@ This project was split in 4 milestones, which were:
 - If all spaces are chosen and there is no winner, it is considered a draw
 - On both situations above, there is the option to restart the game
 - Have fun!
+
+### Demonstration
+
+![Example](Example.gif)
 
 ## Author
 
