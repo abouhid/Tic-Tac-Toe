@@ -1,9 +1,24 @@
 #!/usr/bin/env ruby
 require 'colorize'
-require_relative './Logic.rb'
+require_relative '../lib/Logic.rb'
 
 class Main
   def initialize
-    
+    @game_logic = Logic.new
+    @board = @game_logic.board
+    @player1 = ['X']
+    @player2 = ['O']
+    @current_player = @player1
+    show_welcome_interface
+  end
+
+  private
+
+  def show_welcome_interface
+    divide(1)
+    puts "\n\t\t\t\t Welcome to TIC-TAC-TOE \n\n"
+    divide(1)
+    puts "\n\n"
+    show_start_options
   end
 end
