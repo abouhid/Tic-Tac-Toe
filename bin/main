@@ -70,7 +70,7 @@ class Main
     print top
     update_board if game_over == false
   end
-  
+
   def update_board
     puts "\n\n #{@current_player[1]} choose your move From the available numbers"
     print ' :-'
@@ -88,6 +88,33 @@ class Main
     option = validate(range, gets.chomp.to_i)
     abort_game(1) unless option
     option
+  end
+
+  def validate(range, input)
+    try = 4
+    while range.none?(input) && try.positive?
+      puts " Please choose a Number Between #{range} you have #{try} trials left".yellow
+      break if range.any?(input = gets.chomp.to_i)
+
+      try -= 1
+    end
+    try.zero? ? false : input
+  end
+
+  def show_wrong_input
+    divide(0)
+    puts "\n**** That number is already choosen! please provide a different input. ****\n"
+    divide(0)
+    update_board
+  end
+
+  def show_winner
+    clear_screen
+    divide(1)
+    display_board(true)
+    puts "\n\t\t**** Congratualtions #{@current_player[1]} You have won the game ****\n\n\n".on_green
+    divide(1)
+    restart(1)
   end
 
 end
