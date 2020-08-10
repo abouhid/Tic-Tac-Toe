@@ -77,9 +77,7 @@ class Main
     print ' :-'
     get_move = check_input((1..9))
     update_game = @game_logic.update(get_move, @current_player)
-    while update_game == false
-      update_game = show_wrong_input
-    end
+    update_game = show_wrong_input while update_game == false
     show_winner if update_game == 'WIN'
     show_draw if update_game == 'DRAW'
     @current_player = @current_player == @player1 ? @player2 : @player1
@@ -93,16 +91,16 @@ class Main
     option
   end
 
-    def validate(range, input)
+  def validate(range, input)
     try = 4
-    while  range.none?(input) && try.positive?
+    while range.none?(input) && try.positive?
       puts " Please choose a Number Between #{range} you have #{try} trials left".yellow
       break if range.any?(input = gets.chomp.to_i)
 
       try -= 1
     end
     try.zero? ? false : input
-  end
+end
 
   def show_wrong_input
     divide(0)
