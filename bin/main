@@ -172,5 +172,6 @@ class Main
       abort 'Thank you for playing, Exiting . . .'.on_red
     end
   end
-
 end
+
+Main.new
