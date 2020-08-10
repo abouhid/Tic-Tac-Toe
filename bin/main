@@ -120,4 +120,25 @@ class Main
     restart(1)
   end
 
+  def show_draw
+    clear_screen
+    divide(1)
+    display_board(true)
+    puts "\n\t\t**** Its a draw between #{@player1[1]} and #{@player2[1]} ****\n\n\n".on_yellow
+    divide(1)
+    restart
+  end
+
+  def restart(game_status = 0)
+    if game_status == 1
+      puts "\nDo you want to restart the game? Press Y to play again, hit any other key to finish the game"
+      abort_game(2) unless gets.chomp.upcase == 'Y'
+      reinitiate(game_status)
+    else
+      puts "\nDo you want to replay? Press Y to play again, hit any other key to finish the game"
+      abort_game(2) unless gets.chomp.upcase == 'Y'
+      reinitiate
+    end
+  end
+
 end
