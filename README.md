@@ -14,13 +14,6 @@ This project was split in 4 milestones, which were:
 - Ruby
 - Rubocop
 
-
-## Live Demo
-
-[Live Demo Link]()
-
-
-
 ### Prerequisites
 
 - Browser (Google Chrome, Mozilla Firefox, Safari or any other browser)
@@ -28,11 +21,18 @@ This project was split in 4 milestones, which were:
 ### Setup
 - Open Terminal
 - Run git clone https://github.com/abouhid/Tic-Tac-Toe.git
-- Run cd bin
-- Run ruby main
+- Run `cd Tic-Tac-Toe`
+- Run `ruby bin/main`
 
 ### Game instructions
-
+  The player has the option to play or to exit. If the player decides to play, these steps follow:
+- Both players choose their names to play against each other
+- A 3x3 grid is displayed on the terminal and the first player chooses a number to place his symbol on that number's position
+- The players take turns in order to try to make an uninterrupted row, column or diagonal.
+- The player which does that first wins!
+- If all spaces are chosen and there is no winner, it is considered a draw
+- On both situations above, there is the option to restart the game
+- Have fun!
 
 ## Author
 
@@ -52,7 +52,7 @@ This project was split in 4 milestones, which were:
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/abouhid/Enumerable-methods/issues).
+Feel free to check the [issues page](https://github.com/abouhid/Tic-Tac-Toe/issues).
 
 ## Show your support
 
