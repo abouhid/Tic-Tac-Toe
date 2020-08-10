@@ -10,7 +10,7 @@ class Main
     @current_player = @player1
     show_welcome_interface
   end
-  
+
   private
 
   def show_welcome_interface
@@ -30,6 +30,23 @@ class Main
     clear_screen
     show_instructions
     name_players
+  end
+
+  def show_instructions
+    divide(1)
+    puts "\n---------------GAME INSTRUCTIONS---------------\n".on_green
+    puts " ** Player one will take #{@player1[0]} and Player two will take  #{@player2[0]} \n"
+  end
+
+  def name_players
+    divide(1)
+    puts "\n Player 1 please Enter your name "
+    print ' :-  '
+    @player1.push(gets.chomp)
+    puts "\nPlayer 2 please Enter your name"
+    print ' :-  '
+    @player2.push(gets.chomp)
+    show_players
   end
 
 end
