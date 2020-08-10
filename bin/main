@@ -71,4 +71,28 @@ class Main
     print top
     update_board if game_over == false
   end
+
+  def update_board
+    puts "\n\n #{@current_player[1]} choose your move From the available numbers"
+    print ' :-'
+    get_move = check_input((1..9))
+    update_game = @game_logic.update(get_move, @current_player)
+    while update_game == false
+      update_game = show_wrong_input
+    end
+    show_winner if update_game == 'WIN'
+    show_draw if update_game == 'DRAW'
+    @current_player = @current_player == @player1 ? @player2 : @player1
+    clear_screen
+    display_board
+  end
+
+  def check_input(range)
+    option = validate(range, gets.chomp.to_i)
+    abort_game(1) unless option
+    option
+  end
+
+  
+
 end
