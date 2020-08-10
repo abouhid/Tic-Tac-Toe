@@ -1,39 +1,25 @@
-# Enumerable methods
+# RUBY OOP : TIC TAC TOE game logic
 
 > In this project, I was assigned to recreate enumerable methods of Ruby such as:
-
-- my_each
-- my_each_with_index 
-- my_select
-- my_all? 
-- my_any?
-- my_none?
-- my_count
-- my_map
-- my_inject
 
 > The main goal of this project is to asure I master the methods ruby provides and to learn how to replicate them using basic coding knowledge.
 
 ## Built With
 
 - Ruby
+- colorize gem
 - Rubocop
-
-
-## Live Demo
-
-[Live Demo Link](https://repl.it/@abouhid/Enumerable-methods#main.rb)
-
-
 
 ### Prerequisites
 
+- colorize gem
 - Browser (Google Chrome, Mozilla Firefox, Safari or any other browser)
 
 ### Setup
 - Open Terminal
-- Run git clone git@github.com:abouhid/Enumerable-methods-Project.git
-- Run ruby enumerable_methods.rb
+- gem colorize
+- Run git clone
+- Run ./bin/ruby main
 
 ## Author
 
