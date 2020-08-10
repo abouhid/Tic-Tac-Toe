@@ -6,8 +6,8 @@ class Logic
     @player1_array = []
     @player2_array = []
   end
-  
-  def update(move, current_player) 
+
+  def update(move, current_player)
     return false if @board[move - 1] == 'X' || @board[move - 1] == 'O'
 
     @board[move - 1] = current_player[0]
@@ -32,12 +32,12 @@ class Logic
 
   def winning_move?(array)
     WINNING_MOVES.length.times do |i|
-      return true if WINNING_MOVES[i].all?{ |j| array.include?(j) }
+      return true if WINNING_MOVES[i].all? { |j| array.include?(j) }
     end
     false
   end
 
-  def draw?(array)
+  def draw?(_array)
     @board.none?(Integer)
   end
 
