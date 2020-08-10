@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require 'colorize'
+require_relative '../lib/Logic.rb'
 
 class Main
   def initialize
