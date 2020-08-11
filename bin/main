@@ -6,8 +6,9 @@ class Main
   def initialize
     @game_logic = Logic.new
     @board = @game_logic.board
-    @player1 = ['X']
-    @player2 = ['O']
+    @players = Players.new
+    @player1 = @players.player1
+    @player2 = @players.player2
     @current_player = @player1
     show_welcome_interface
   end
@@ -104,7 +105,7 @@ class Main
 
   def show_wrong_input
     divide(0)
-    puts "\n**** That number is already choosen! please provide a different input. ****\n"
+    puts "\n**** That number is already chosen! please provide a different input. ****\n"
     divide(0)
     update_board
   end

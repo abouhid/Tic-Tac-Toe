@@ -12,7 +12,7 @@ Metrics/MethodLength:
 Metrics/AbcSize:
   Max: 50
 Metrics/ClassLength:
-  Max: 150
+  Max: 180
 Metrics/BlockLength:
   ExcludedMethods: ['describe']
   Max: 30
@@ -57,3 +57,7 @@ Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
+
+Naming/FileName:
+  Enabled: false
+

@@ -1,4 +1,6 @@
+
 # Tic Tac Toe Project
+
 
 > In this project, it is assigned for us to create a Tic Tac Toe game using only Ruby to increase our knowledge on the OOP concepts. 
 This project was split in 4 milestones, which were:
@@ -7,22 +9,27 @@ This project was split in 4 milestones, which were:
 - Creating the game logic
 - Writing the game instructions
 
-> The main goal of this project is to asure we master classes,objects and methods, and to learn how to work better with Ruby and GitFlow.
+> The main goal of this project is to asure I master the methods ruby provides and to learn how to replicate them using basic coding knowledge.
 
-# Built With
+## Built With
+
 
 - Ruby
+- colorize gem
 - Rubocop
 
 ### Prerequisites
 
+- colorize gem
 - Browser (Google Chrome, Mozilla Firefox, Safari or any other browser)
 
 ### Setup
 - Open Terminal
+
 - Run git clone https://github.com/abouhid/Tic-Tac-Toe.git
 - Run `cd Tic-Tac-Toe`
 - Run `ruby bin/main`
+
 
 ### Game instructions
   The player has the option to play or to exit. If the player decides to play, these steps follow:
