@@ -10,6 +10,25 @@ This project was split in 4 milestones, which were:
 - Writing the game instructions
 
 > The main goal of this project is to asure I master the methods ruby provides and to learn how to replicate them using basic coding knowledge.
+### Demonstration
+<img src="./media/Example.gif" width="70%" height="500" />
+
+### Screenshot
+## Welcome Screen
+<img src="./media/s1.JPG" width="100%" height="500" />
+
+## An interface to get players name
+<img src="./media/s2.JPG" width="100%" height="500" />
+
+## Get players move
+<img src="./media/s3.JPG" width="100%" height="500" />
+
+## Displays Error
+<img src="./media/s4.JPG" width="100%" height="500" />
+
+## Displays Win or draw cases
+<img src="./media/s5.JPG" width="100%" height="500" />
+<img src="./media/s6.JPG" width="100%" height="500" />
 
 ## Built With
 
@@ -40,11 +59,6 @@ This project was split in 4 milestones, which were:
 - If all spaces are chosen and there is no winner, it is considered a draw
 - On both situations above, there is the option to restart the game
 - Have fun!
-
-### Demonstration
-
-<!-- ![Example](Example.gif) -->
-<img src="./Example.gif" width="500" height="500" />
 
 ### Authors
 
