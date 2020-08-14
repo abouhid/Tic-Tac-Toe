@@ -10,39 +10,37 @@ This project was split in 4 milestones, which were:
 - Writing the game instructions
 
 > The main goal of this project is to asure I master the methods ruby provides and to learn how to replicate them using basic coding knowledge.
-### Demonstration
+## Demonstration
 <img src="./media/Example.gif" width="70%" height="500" />
 
-### Screenshot
-## Welcome Screen
+## Screenshot
+### Welcome Screen
 <img src="./media/s1.JPG" width="100%" height="500" />
 
-## An interface to get players name
+### An interface to get players name
 <img src="./media/s2.JPG" width="100%" height="500" />
 
-## Get players move
+### Get players move
 <img src="./media/s3.JPG" width="100%" height="500" />
 
-## Displays Error
+### Displays Error
 <img src="./media/s4.JPG" width="100%" height="500" />
 
-## Displays Win or draw cases
+### Displays Win or draw cases
 <img src="./media/s5.JPG" width="100%" height="500" />
 <img src="./media/s6.JPG" width="100%" height="500" />
 
 ## Built With
-
-
 - Ruby
 - colorize gem
 - Rubocop
 
-### Prerequisites
+## Prerequisites
 
 - colorize gem
 - Browser (Google Chrome, Mozilla Firefox, Safari or any other browser)
 
-### Setup
+## Setup
 - Open Terminal
 
 - Run git clone https://github.com/abouhid/Tic-Tac-Toe.git
@@ -50,7 +48,7 @@ This project was split in 4 milestones, which were:
 - Run `ruby bin/main`
 
 
-### Game instructions
+## Game instructions
   The player has the option to play or to exit. If the player decides to play, these steps follow:
 - Both players choose their names to play against each other
 - A 3x3 grid is displayed on the terminal and the first player chooses a number to place his symbol on that number's position
@@ -60,7 +58,7 @@ This project was split in 4 milestones, which were:
 - On both situations above, there is the option to restart the game
 - Have fun!
 
-### Authors
+## Authors
 
 👤 **Alexandre Bouhid**
 
