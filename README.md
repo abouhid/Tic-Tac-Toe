@@ -11,7 +11,7 @@ This project was split in 4 milestones, which were:
 
 > The main goal of this project is to asure I master the methods ruby provides and to learn how to replicate them using basic coding knowledge.
 ### Demonstration
-<img src="./media/Example.gif" width="100%" height="500" />
+<img src="./media/Example.gif" width="70%" height="500" />
 
 ### Screenshot
 ## Welcome Screen
