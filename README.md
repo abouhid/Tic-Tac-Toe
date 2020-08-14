@@ -10,26 +10,25 @@ This project was split in 4 milestones, which were:
 - Writing the game instructions
 
 > The main goal of this project is to asure I master the methods ruby provides and to learn how to replicate them using basic coding knowledge.
+### Demonstration
+<img src="./media/Example.gif" width="100%" height="500" />
 
 ### Screenshot
-<img src="./media/Example.gif" width="500" height="500" />
-
-### Demonstration
 ## Welcome Screen
-<img src="./media/s1.JPG" width="500" height="500" />
+<img src="./media/s1.JPG" width="100%" height="500" />
 
 ## An interface to get players name
-<img src="./media/s2.JPG" width="500" height="500" />
+<img src="./media/s2.JPG" width="100%" height="500" />
 
 ## Get players move
-<img src="./media/s3.JPG" width="500" height="500" />
+<img src="./media/s3.JPG" width="100%" height="500" />
 
 ## Displays Error
-<img src="./media/s4.JPG" width="500" height="500" />
+<img src="./media/s4.JPG" width="100%" height="500" />
 
 ## Displays Win or draw cases
-<img src="./media/s5.JPG" width="500" height="500" />
-<img src="./media/s6.JPG" width="500" height="500" />
+<img src="./media/s5.JPG" width="100%" height="500" />
+<img src="./media/s6.JPG" width="100%" height="500" />
 
 ## Built With
 
